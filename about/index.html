@@ -20,16 +20,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="## 關於我  沒什麼好說的，我會努力讓自己有點東西能說的。  ## 關於這個倉庫  這個部落格是我紀錄我學習過程與放學習筆記的地方，希望這些也幫助到一些想學習這些技術的朋友們。    ---  ## 有接觸過的技術  ### 語言 &amp; 系統 - **OS:** Debian &#x2F; Kali Linux &#x2F; windows 10 - **Languages:** Python, Bas">
+    <meta name="description" content="關於我沒什麼好說的，我會努力讓自己有點東西能說的。 關於這個倉庫這個部落格是我紀錄我學習過程與放學習筆記的地方，希望這些也幫助到一些想學習這些技術的朋友們。  有接觸過的技術語言 &amp; 系統 OS: Debian &#x2F; Kali Linux &#x2F; windows 10 Languages: Python, Bash, C&#x2F;C++, javascript,">
 <meta property="og:type" content="website">
-<meta property="og:title" content="關於我 (About Me)">
+<meta property="og:title" content="about">
 <meta property="og:url" content="http://example.com/about/index.html">
 <meta property="og:site_name" content="Coco39831的筆記倉庫">
-<meta property="og:description" content="## 關於我  沒什麼好說的，我會努力讓自己有點東西能說的。  ## 關於這個倉庫  這個部落格是我紀錄我學習過程與放學習筆記的地方，希望這些也幫助到一些想學習這些技術的朋友們。    ---  ## 有接觸過的技術  ### 語言 &amp; 系統 - **OS:** Debian &#x2F; Kali Linux &#x2F; windows 10 - **Languages:** Python, Bas">
+<meta property="og:description" content="關於我沒什麼好說的，我會努力讓自己有點東西能說的。 關於這個倉庫這個部落格是我紀錄我學習過程與放學習筆記的地方，希望這些也幫助到一些想學習這些技術的朋友們。  有接觸過的技術語言 &amp; 系統 OS: Debian &#x2F; Kali Linux &#x2F; windows 10 Languages: Python, Bash, C&#x2F;C++, javascript,">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="http://example.com/images/avatar.jpg">
-<meta property="article:published_time" content="2026-01-03T14:00:00.000Z">
-<meta property="article:modified_time" content="2026-01-03T14:43:54.678Z">
+<meta property="article:published_time" content="2026-01-03T14:47:22.000Z">
+<meta property="article:modified_time" content="2026-01-03T14:51:23.207Z">
 <meta property="article:author" content="coco39831">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/avatar.jpg">
@@ -38,10 +38,10 @@
 <link rel="canonical" href="http://example.com/about/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":"","permalink":"http://example.com/about/index.html","path":"about/index.html","title":"關於我 (About Me)"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":true,"permalink":"http://example.com/about/index.html","path":"about/index.html","title":"about"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>關於我 (About Me) | Coco39831的筆記倉庫
+<title>about | Coco39831的筆記倉庫
 </title>
   
 
@@ -82,6 +82,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -103,6 +106,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li>
+  </ul>
+</nav>
 
 
 
@@ -112,7 +119,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -125,6 +132,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E6%96%BC%E6%88%91"><span class="nav-number">1.</span> <span class="nav-text">關於我</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%9C%E6%96%BC%E9%80%99%E5%80%8B%E5%80%89%E5%BA%AB"><span class="nav-number">2.</span> <span class="nav-text">關於這個倉庫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E6%8E%A5%E8%A7%B8%E9%81%8E%E7%9A%84%E6%8A%80%E8%A1%93"><span class="nav-number">3.</span> <span class="nav-text">有接觸過的技術</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AA%9E%E8%A8%80-%E7%B3%BB%E7%B5%B1"><span class="nav-number">3.1.</span> <span class="nav-text">語言 &amp; 系統</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%AB-%E8%81%AF%E7%B5%A1%E9%A0%BB%E9%81%93"><span class="nav-number">4.</span> <span class="nav-text">📫 聯絡頻道</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -172,7 +180,7 @@
     
     <div class="post-block" lang="zh-TW"><header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">關於我 (About Me)
+<h1 class="post-title" itemprop="name headline">about
 </h1>
 
 <div class="post-meta-container">
@@ -184,37 +192,25 @@
       
       
       <div class="post-body">
-          
-<div style="text-align:center">
+          <div style="text-align:center">
   <img src="../images/avatar.jpg" width="120" style="border-radius: 50%;" />
 </div>
 
-## 關於我
+<h2 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h2><p>沒什麼好說的，我會努力讓自己有點東西能說的。</p>
+<h2 id="關於這個倉庫"><a href="#關於這個倉庫" class="headerlink" title="關於這個倉庫"></a>關於這個倉庫</h2><p>這個部落格是我紀錄我學習過程與放學習筆記的地方，希望這些也幫助到一些想學習這些技術的朋友們。</p>
+<hr>
+<h2 id="有接觸過的技術"><a href="#有接觸過的技術" class="headerlink" title="有接觸過的技術"></a>有接觸過的技術</h2><h3 id="語言-系統"><a href="#語言-系統" class="headerlink" title="語言 &amp; 系統"></a>語言 &amp; 系統</h3><ul>
+<li><strong>OS:</strong> Debian &#x2F; Kali Linux &#x2F; windows 10</li>
+<li><strong>Languages:</strong> Python, Bash, C&#x2F;C++, javascript, CSS, HTML</li>
+</ul>
+<hr>
+<h2 id="📫-聯絡頻道"><a href="#📫-聯絡頻道" class="headerlink" title="📫 聯絡頻道"></a>📫 聯絡頻道</h2><p>如果你想交流歡迎聯繫：</p>
+<ul>
+<li><strong>GitHub:</strong> <a target="_blank" rel="noopener" href="https://github.com/coco39831">coco39831</a></li>
+<li><strong>Email:</strong> <a href="mailto:&#99;&#x6f;&#99;&#x6f;&#51;&#x39;&#x38;&#x33;&#x31;&#64;&#x65;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">coco39831@email.com</a></li>
+<li><strong>Discord:</strong> coco39831</li>
+</ul>
 
-沒什麼好說的，我會努力讓自己有點東西能說的。
-
-## 關於這個倉庫
-
-這個部落格是我紀錄我學習過程與放學習筆記的地方，希望這些也幫助到一些想學習這些技術的朋友們。
-
-
-
----
-
-## 有接觸過的技術
-
-### 語言 & 系統
-- **OS:** Debian / Kali Linux / windows 10
-- **Languages:** Python, Bash, C/C++, javascript, CSS, HTML
-
-
----
-
-## 📫 聯絡頻道
-如果你想交流技術，或是有發現有趣的漏洞，歡迎聯繫：
-- **GitHub:** [coco39831](https://github.com/coco39831)
-- **Email:** coco39831@email.com
-- **Discord:** coco39831
       </div>
       
       
