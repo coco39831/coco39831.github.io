@@ -147,7 +147,7 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -215,7 +215,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2026-01-17 20:32:14 / 修改時間：21:40:49" itemprop="dateCreated datePublished" datetime="2026-01-17T20:32:14+08:00">2026-01-17</time>
+      <time title="創建時間：2026-01-17 20:32:14 / 修改時間：21:43:53" itemprop="dateCreated datePublished" datetime="2026-01-17T20:32:14+08:00">2026-01-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -224,10 +224,6 @@
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Bandit/" itemprop="url" rel="index"><span itemprop="name">Bandit</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Bandit/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
         </span>
     </span>
 
@@ -241,21 +237,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>&lt;–</p>
-<h1 id="Link-start"><a href="#Link-start" class="headerlink" title="Link start!"></a>Link start!</h1><h2 id="目標-Objective"><a href="#目標-Objective" class="headerlink" title="目標 Objective"></a>目標 Objective</h2><p>透過ssh連上伺服器</p>
+          <h1 id="Link-start"><a href="#Link-start" class="headerlink" title="Link start!"></a>Link start!</h1><h2 id="目標-Objective"><a href="#目標-Objective" class="headerlink" title="目標 Objective"></a>目標 Objective</h2><p>透過ssh連上伺服器</p>
 <p>網址:bandit.labs.overthewire.org<br>port:2220<br>username:bandit0</p>
 <h2 id="ssh是甚麼-噓-x"><a href="#ssh是甚麼-噓-x" class="headerlink" title="ssh是甚麼 (噓~!!!!(x )"></a>ssh是甚麼 (噓~!!!!(x )</h2><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
 <h3 id="基礎連線-Basic-Connection"><a href="#基礎連線-Basic-Connection" class="headerlink" title="基礎連線 (Basic Connection)"></a>基礎連線 (Basic Connection)</h3><p>最基本的登入方式</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#語法: ssh [使用者]@[主機IP或網域]</span><br><span class="line">ssh bandit0@bandit.labs.overthewire.org</span><br><span class="line"></span><br><span class="line">#如果你的本地帳號和遠端帳號一樣，可以省略使用者名稱</span><br><span class="line">ssh bandit.labs.overthewire.org</span><br></pre></td></tr></table></figure>
-<h3 id="指定端口-Specify-Port"><a href="#指定端口-Specify-Port" class="headerlink" title="指定端口 (Specify Port)"></a>指定端口 (Specify Port)</h3><p>為了安全，有時候服務不一定開在預設端口<br>預設端口:TCP 22 port</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#語法: -p [Port號]</span><br><span class="line">ssh bandit0@bandit.labs.overthewire.org -p 2220</span><br></pre></td></tr></table></figure>
-
-<h2 id="解題步驟"><a href="#解題步驟" class="headerlink" title="解題步驟"></a>解題步驟</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#根據題目要求輸入:</span><br><span class="line">ssh bandit0@bandit.labs.overthewire.org -p 2220</span><br></pre></td></tr></table></figure>
-<p><img src="/images/bandit-0-1.PNG" alt="輸入密碼的畫面"></p>
-<p>在輸入區輸入密碼完成登入</p>
-<p><img src="/images/bandit-0-2.PNG" alt="終端機出現很長一串"></p>
-<p>恭喜完成連線!</p>
-
+<h3 id="指定端口-Specify-Port"><a href="#指定端口-Specify-Port" class="headerlink" title="指定端口 (Specify Port)"></a>指定端口 (Specify Port)</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2026/01/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/Bandit-Level-0/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -317,7 +312,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2026-01-17 21:40:48" itemprop="dateModified" datetime="2026-01-17T21:40:48+08:00">2026-01-17</time>
+      <time title="修改時間：2026-01-17 21:43:52" itemprop="dateModified" datetime="2026-01-17T21:43:52+08:00">2026-01-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -339,47 +334,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>&lt;–</p>
-<h2 id="怎麼麼有這麼多Linux？"><a href="#怎麼麼有這麼多Linux？" class="headerlink" title="怎麼麼有這麼多Linux？"></a>怎麼麼有這麼多Linux？</h2><p>嚴格來講，Linux只是單指Linux核心（Kernel），而平常看到的Arch Linux, Debian Linux以及其他的，這些全都是發行板，也就是其他人已經打包好的Linux。</p>
+          <h2 id="怎麼麼有這麼多Linux？"><a href="#怎麼麼有這麼多Linux？" class="headerlink" title="怎麼麼有這麼多Linux？"></a>怎麼麼有這麼多Linux？</h2><p>嚴格來講，Linux只是單指Linux核心（Kernel），而平常看到的Arch Linux, Debian Linux以及其他的，這些全都是發行板，也就是其他人已經打包好的Linux。</p>
 <hr>
 <h2 id="拆解Linux發行版"><a href="#拆解Linux發行版" class="headerlink" title="拆解Linux發行版"></a>拆解Linux發行版</h2><p>通常一個發行版可分為幾個零件，核心（Kernel）、殼層（Shell）、圖形界面（Desktop Enviroment）。</p>
 <h3 id="核心（Kernel）"><a href="#核心（Kernel）" class="headerlink" title="核心（Kernel）"></a>核心（Kernel）</h3><p>核心就如同它名字所說，它是整個作業系統的心臟，與硬體直接對話。<br>    功能： 資源分配、進程管理、硬體驅動<br>    比喻： 它就像是汽車引擎，你不會直接操作引擎來開車，但你又不能失去它。</p>
 <h3 id="殼層（Shell）"><a href="#殼層（Shell）" class="headerlink" title="殼層（Shell）"></a>殼層（Shell）</h3><p>這是使用者與核心溝通的橋樑。當你在黑底白字的視窗輸入指令時，Shell會將這些指令翻譯給核心。<br>    常見種類： Bash（Bourne Again Shell）、Zsh<br>    比喻：汽車的腳踏板，你得通過這控制引擎。</p>
 <hr>
-<h2 id="Limux-與-Windows-的核心差異"><a href="#Limux-與-Windows-的核心差異" class="headerlink" title="Limux 與 Windows 的核心差異"></a>Limux 與 Windows 的核心差異</h2><h3 id="1-檔案系統：消失的C槽"><a href="#1-檔案系統：消失的C槽" class="headerlink" title="1.檔案系統：消失的C槽"></a>1.檔案系統：消失的C槽</h3><table>
-<thead>
-<tr>
-<th align="left">系統</th>
-<th align="left">檔案結構邏輯</th>
-<th align="left">詳細說明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>Windows</strong></td>
-<td align="left">磁碟機代號</td>
-<td align="left">使用 <code>C:</code>、<code>D:\</code> 等代號區分不同分割區。</td>
-</tr>
-<tr>
-<td align="left"><strong>Linux</strong></td>
-<td align="left">樹狀結構 (Tree Structure)</td>
-<td align="left">一切都從根目錄 <code>/</code> (Root) 開始。<br>不同的硬碟分區只是「掛載（Mount）」在樹狀結構的某個資料夾下。<br>例如：<code>/home/user</code> 是你的家目錄，類似 Windows 的「使用者」資料夾。</td>
-</tr>
-</tbody></table>
-<h3 id="2-一切皆檔案"><a href="#2-一切皆檔案" class="headerlink" title="2. 一切皆檔案"></a>2. 一切皆檔案</h3><p>這是Unix&#x2F;Linux的重要哲學。<br>    你的文件是檔案。<br>    你的硬碟也是檔案（&#x2F;dev&#x2F;sda）在系統看來也是檔案。<br>    你的鍵盤輸入、螢幕輸出在本質上也是資料流（stream）檔案。<br>    意義：你可以用同個指令處理文字檔、硬體設備、系統設定之類的。</p>
-<h3 id="3-嚴格的權限管理"><a href="#3-嚴格的權限管理" class="headerlink" title="3. 嚴格的權限管理"></a>3. 嚴格的權限管理</h3><p>Linux是多使用者系統，每一個使用者都會有不的權限。<br>    Root（超級使用者）：擁有系統的生殺大權，可以刪除任何檔案（剛說過Linux系統下，一切皆文件，當然也包括系統本身）。<br>    一般使用者：只能修改自己的檔案。若要執行系統級別的操作，須暫時使用Root權限。</p>
-<hr>
-<h2 id="如何開始體驗Linux"><a href="#如何開始體驗Linux" class="headerlink" title="如何開始體驗Linux"></a>如何開始體驗Linux</h2><p>你當然可以直接將你常用的電腦慣成Linux，但這並不推薦，因為完壞了要重來很麻煩，因此我推薦使用虛擬機來操作。<br>    1. WSL（Windows Subsystem for Linux）<br>        優點：直接在Windows上運行Linux，適合開發和學習指令。<br>        在Windows Powershell輸入wsl –install即可安裝Ubuntu。<br>    2. 虛擬機（Virtual Machine）:<br>        優點：擁有完整的界面，完壞了可以直接刪掉重來。<br>        工具：使用VirtualBox 或是 VMware</p>
-<h2 id="終端機的基礎指令"><a href="#終端機的基礎指令" class="headerlink" title="終端機的基礎指令"></a>終端機的基礎指令</h2><ol>
-<li><p>導航與探索<br>pwd (Print Working Directory)：告訴你現在在哪裡。<br>ls (List)：列出目前資料夾有哪些檔案。<br>ls -a：顯示所有檔案（包含隱藏檔）。<br>ls -l：以詳細清單顯示（包含權限、大小）。<br>cd (Change Directory)：切換目錄。<br>cd &#x2F;：回到根目錄。<br>cd ~：回到你的家目錄（Home）。<br>cd ..：回到上一層目錄。</p>
-</li>
-<li><p>檔案操作<br>mkdir folder_name (Make Directory)：建立新資料夾。<br>touch file.txt：建立一個空的檔案。<br>cp source dest (Copy)：複製檔案。<br>mv source dest (Move)：移動檔案（也用於重新命名）。<br>rm file_name (Remove)：刪除檔案。<br>危險指令： rm -rf folder_name (強制遞迴刪除資料夾，使用時請極度小心)。</p>
-</li>
-<li><p>系統管理權限<br>sudo (SuperUser Do)：以超級管理員身分執行指令。<br>範例：apt install git 可能會失敗，但 sudo apt install git 會成功，因為安裝軟體需要 Root 權限。</p>
-</li>
-<li><p>套件管理<br>Linux 通常不從網站下載 .exe 安裝檔，而是使用套件管理器。以 Ubuntu (Debian系) 為例：<br> sudo apt update：更新軟體來源清單（像重新整理 App Store 目錄）。<br> sudo apt upgrade：升級所有已安裝的軟體。<br> sudo apt install [軟體名]：安裝軟體（例如 sudo apt install python3）。</p>
-</li>
-</ol>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2026/01/04/Linux%E6%8C%87%E4%BB%A4%E5%85%A5%E9%96%80%E4%B9%8B%E7%92%B0%E5%A2%83%E8%88%87%E7%90%86%E8%AB%96%E7%9F%A5%E8%AD%98/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
