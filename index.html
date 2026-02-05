@@ -320,7 +320,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2026-02-05 15:04:59" itemprop="dateModified" datetime="2026-02-05T15:04:59+08:00">2026-02-05</time>
+      <time title="修改時間：2026-02-05 18:05:47" itemprop="dateModified" datetime="2026-02-05T18:05:47+08:00">2026-02-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -347,11 +347,11 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="目標-Objective"><a href="#目標-Objective" class="headerlink" title="目標 Objective"></a>目標 Objective</h2><p>透過ssh連上伺服器</p>
-<p>網址:bandit.labs.overthewire.org<br>port:2220<br>username:bandit0</p>
-<h2 id="ssh是甚麼"><a href="#ssh是甚麼" class="headerlink" title="ssh是甚麼"></a>ssh是甚麼</h2><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
+<p>網址:bandit.labs.overthewire.org<br>port:2220<br>username:bandit0<br>password:bandit0 (在linux系統下輸入密碼不會顯示是正常的，這叫做終端回顯抑制 Terminal Echo Suppression，是為了防止肩後窺視Shoulder Surfing)</p>
+<h2 id="ssh是甚麼"><a href="#ssh是甚麼" class="headerlink" title="ssh是甚麼"></a>ssh是甚麼</h2><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： Telnet 之所以危險，是因為它在 TCP 三向交握後，所有資料（包括密碼）都是以 Plaintext（明文） 傳輸，而 SSH 使用了非對稱加密，確保攻擊者攔截封包也只能看見亂碼。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
 <h3 id="基礎連線-Basic-Connection"><a href="#基礎連線-Basic-Connection" class="headerlink" title="基礎連線 (Basic Connection)"></a>基礎連線 (Basic Connection)</h3><p>最基本的登入方式</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#語法: ssh [使用者]@[主機IP或網域]</span><br><span class="line">ssh bandit0@bandit.labs.overthewire.org</span><br><span class="line"></span><br><span class="line">#如果你的本地帳號和遠端帳號一樣，可以省略使用者名稱</span><br><span class="line">ssh bandit.labs.overthewire.org</span><br></pre></td></tr></table></figure>
-<h3 id="指定端口-Specify-Port"><a href="#指定端口-Specify-Port" class="headerlink" title="指定端口 (Specify Port)"></a>指定端口 (Specify Port)</h3><p>為了安全，有時候服務不一定開在預設端口<br>預設端口:TCP 22 port</p>
+<h3 id="指定端口-Specify-Port"><a href="#指定端口-Specify-Port" class="headerlink" title="指定端口 (Specify Port)"></a>指定端口 (Specify Port)</h3><p>為了避免自動化掃描，有時候服務不一定開在預設端口<br>預設端口:TCP 22 port</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2026/01/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/Bandit-Level-0/#more" rel="contents">
