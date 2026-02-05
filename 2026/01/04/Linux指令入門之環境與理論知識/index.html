@@ -28,7 +28,7 @@
 <meta property="og:description" content="怎麼麼有這麼多Linux？嚴格來講，Linux只是單指Linux核心（Kernel），而平常看到的Arch Linux, Debian Linux以及其他的，這些全都是發行板，也就是其他人已經打包好的Linux。  拆解Linux發行版通常一個發行版可分為幾個零件，核心（Kernel）、殼層（Shell）、圖形界面（Desktop Enviroment）。 核心（Kernel）核心就如同它名字所說">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2026-01-04T04:07:30.000Z">
-<meta property="article:modified_time" content="2026-01-21T10:36:38.123Z">
+<meta property="article:modified_time" content="2026-02-05T07:05:29.798Z">
 <meta property="article:author" content="coco39831">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -226,7 +226,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2026-01-21 18:36:38" itemprop="dateModified" datetime="2026-01-21T18:36:38+08:00">2026-01-21</time>
+      <time title="修改時間：2026-02-05 15:05:29" itemprop="dateModified" datetime="2026-02-05T15:05:29+08:00">2026-02-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -276,6 +276,7 @@
 <h3 id="3-嚴格的權限管理"><a href="#3-嚴格的權限管理" class="headerlink" title="3. 嚴格的權限管理"></a>3. 嚴格的權限管理</h3><p>Linux是多使用者系統，每一個使用者都會有不的權限。<br>    Root（超級使用者）：擁有系統的生殺大權，可以刪除任何檔案（剛說過Linux系統下，一切皆文件，當然也包括系統本身）。<br>    一般使用者：只能修改自己的檔案。若要執行系統級別的操作，須暫時使用Root權限。</p>
 <hr>
 <h2 id="如何開始體驗Linux"><a href="#如何開始體驗Linux" class="headerlink" title="如何開始體驗Linux"></a>如何開始體驗Linux</h2><p>你當然可以直接將你常用的電腦慣成Linux，但這並不推薦，因為完壞了要重來很麻煩，因此我推薦使用虛擬機來操作。<br>    1. WSL（Windows Subsystem for Linux）<br>        優點：直接在Windows上運行Linux，適合開發和學習指令。<br>        在Windows Powershell輸入wsl –install即可安裝Ubuntu。<br>    2. 虛擬機（Virtual Machine）:<br>        優點：擁有完整的界面，完壞了可以直接刪掉重來。<br>        工具：使用VirtualBox 或是 VMware</p>
+<hr>
 <h2 id="終端機的基礎指令"><a href="#終端機的基礎指令" class="headerlink" title="終端機的基礎指令"></a>終端機的基礎指令</h2><ol>
 <li><p>導航與探索<br>pwd (Print Working Directory)：告訴你現在在哪裡。<br>ls (List)：列出目前資料夾有哪些檔案。<br>ls -a：顯示所有檔案（包含隱藏檔）。<br>ls -l：以詳細清單顯示（包含權限、大小）。<br>cd (Change Directory)：切換目錄。<br>cd &#x2F;：回到根目錄。<br>cd ~：回到你的家目錄（Home）。<br>cd ..：回到上一層目錄。</p>
 </li>

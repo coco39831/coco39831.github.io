@@ -213,9 +213,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2026-01-18 21:01:40 / 修改時間：21:57:08" itemprop="dateCreated datePublished" datetime="2026-01-18T21:01:40+08:00">2026-01-18</time>
+      <time title="創建時間：2026-01-18 21:01:40" itemprop="dateCreated datePublished" datetime="2026-01-18T21:01:40+08:00">2026-01-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2026-02-05 15:05:10" itemprop="dateModified" datetime="2026-02-05T15:05:10+08:00">2026-02-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -237,13 +243,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>&lt;–</p>
-<h1 id="SSH-簡介"><a href="#SSH-簡介" class="headerlink" title="SSH 簡介"></a>SSH 簡介</h1><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。<br>預設 Port： TCP 22。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
+          <h1 id="SSH-簡介"><a href="#SSH-簡介" class="headerlink" title="SSH 簡介"></a>SSH 簡介</h1><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。<br>預設 Port： TCP 22。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
 <h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1><h2 id="基礎連線-Basic-Connection"><a href="#基礎連線-Basic-Connection" class="headerlink" title="基礎連線 (Basic Connection)"></a>基礎連線 (Basic Connection)</h2><p>最基本的登入方式。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#語法: ssh [使用者]@[主機IP或網域]</span><br><span class="line">ssh root@192.168.1.100</span><br><span class="line"></span><br><span class="line">#如果你的本地帳號和遠端帳號一樣，可以省略使用者名稱</span><br><span class="line">ssh 192.168.1.100</span><br></pre></td></tr></table></figure>
 
 <h2 id="指定端口-Specify-Port"><a href="#指定端口-Specify-Port" class="headerlink" title="指定端口 (Specify Port)"></a>指定端口 (Specify Port)</h2><p>很多伺服器為了安全，不會開在預設的 22 Port。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#語法: -p [Port號]</span><br><span class="line">ssh bandit0@bandit.labs.overthewire.org -p 2220</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用金鑰登入-Key-Based-Auth"><a href="#使用金鑰登入-Key-Based-Auth" class="headerlink" title="使用金鑰登入 (Key-Based Auth)"></a>使用金鑰登入 (Key-Based Auth)</h2>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2026/01/18/tool/Tool%E4%B9%8Bssh/#more" rel="contents">
@@ -305,9 +312,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2026-01-17 20:32:14 / 修改時間：21:49:43" itemprop="dateCreated datePublished" datetime="2026-01-17T20:32:14+08:00">2026-01-17</time>
+      <time title="創建時間：2026-01-17 20:32:14" itemprop="dateCreated datePublished" datetime="2026-01-17T20:32:14+08:00">2026-01-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2026-02-05 15:04:59" itemprop="dateModified" datetime="2026-02-05T15:04:59+08:00">2026-02-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -333,12 +346,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Link-start"><a href="#Link-start" class="headerlink" title="Link start!"></a>Link start!</h1><h2 id="目標-Objective"><a href="#目標-Objective" class="headerlink" title="目標 Objective"></a>目標 Objective</h2><p>透過ssh連上伺服器</p>
+          <h2 id="目標-Objective"><a href="#目標-Objective" class="headerlink" title="目標 Objective"></a>目標 Objective</h2><p>透過ssh連上伺服器</p>
 <p>網址:bandit.labs.overthewire.org<br>port:2220<br>username:bandit0</p>
-<h2 id="ssh是甚麼-噓-x"><a href="#ssh是甚麼-噓-x" class="headerlink" title="ssh是甚麼 (噓~!!!!(x )"></a>ssh是甚麼 (噓~!!!!(x )</h2><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
+<h2 id="ssh是甚麼"><a href="#ssh是甚麼" class="headerlink" title="ssh是甚麼"></a>ssh是甚麼</h2><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
 <h3 id="基礎連線-Basic-Connection"><a href="#基礎連線-Basic-Connection" class="headerlink" title="基礎連線 (Basic Connection)"></a>基礎連線 (Basic Connection)</h3><p>最基本的登入方式</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#語法: ssh [使用者]@[主機IP或網域]</span><br><span class="line">ssh bandit0@bandit.labs.overthewire.org</span><br><span class="line"></span><br><span class="line">#如果你的本地帳號和遠端帳號一樣，可以省略使用者名稱</span><br><span class="line">ssh bandit.labs.overthewire.org</span><br></pre></td></tr></table></figure>
-<h3 id="指定端口-Specify-Port"><a href="#指定端口-Specify-Port" class="headerlink" title="指定端口 (Specify Port)"></a>指定端口 (Specify Port)</h3>
+<h3 id="指定端口-Specify-Port"><a href="#指定端口-Specify-Port" class="headerlink" title="指定端口 (Specify Port)"></a>指定端口 (Specify Port)</h3><p>為了安全，有時候服務不一定開在預設端口<br>預設端口:TCP 22 port</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2026/01/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/Bandit-Level-0/#more" rel="contents">
@@ -408,7 +421,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2026-01-21 18:36:38" itemprop="dateModified" datetime="2026-01-21T18:36:38+08:00">2026-01-21</time>
+      <time title="修改時間：2026-02-05 15:05:29" itemprop="dateModified" datetime="2026-02-05T15:05:29+08:00">2026-02-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">

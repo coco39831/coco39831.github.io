@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="&lt;– SSH 簡介定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。預設 Port： TCP 22。運作模式： Client-Server 架構。你的電腦是 Client (">
+    <meta name="description" content="SSH 簡介定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。預設 Port： TCP 22。運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tool之ssh">
 <meta property="og:url" content="http://example.com/2026/01/18/tool/Tool%E4%B9%8Bssh/index.html">
 <meta property="og:site_name" content="coco39831的筆記倉庫">
-<meta property="og:description" content="&lt;– SSH 簡介定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。預設 Port： TCP 22。運作模式： Client-Server 架構。你的電腦是 Client (">
+<meta property="og:description" content="SSH 簡介定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。預設 Port： TCP 22。運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2026-01-18T13:01:40.000Z">
-<meta property="article:modified_time" content="2026-01-18T13:57:08.985Z">
+<meta property="article:modified_time" content="2026-02-05T07:05:10.427Z">
 <meta property="article:author" content="coco39831">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
@@ -130,7 +130,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH-%E7%B0%A1%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">SSH 簡介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">常用指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A4%8E%E9%80%A3%E7%B7%9A-Basic-Connection"><span class="nav-number">2.1.</span> <span class="nav-text">基礎連線 (Basic Connection)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E7%AB%AF%E5%8F%A3-Specify-Port"><span class="nav-number">2.2.</span> <span class="nav-text">指定端口 (Specify Port)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E9%87%91%E9%91%B0%E7%99%BB%E5%85%A5-Key-Based-Auth"><span class="nav-number">2.3.</span> <span class="nav-text">使用金鑰登入 (Key-Based Auth)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%B7%E8%A1%8C%E5%96%AE%E6%AC%A1%E6%8C%87%E4%BB%A4-One-Shot-Command"><span class="nav-number">2.4.</span> <span class="nav-text">執行單次指令 (One-Shot Command)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%91%E9%91%B0%E7%AE%A1%E7%90%86-Key-Management"><span class="nav-number">2.5.</span> <span class="nav-text">金鑰管理 (Key Management)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%A7%E9%81%93%E8%88%87%E8%B7%B3%E6%9D%BF-Tunneling-Proxy"><span class="nav-number">3.</span> <span class="nav-text">隧道與跳板 (Tunneling &amp; Proxy)</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH-%E7%B0%A1%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">SSH 簡介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">常用指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A4%8E%E9%80%A3%E7%B7%9A-Basic-Connection"><span class="nav-number">2.1.</span> <span class="nav-text">基礎連線 (Basic Connection)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E7%AB%AF%E5%8F%A3-Specify-Port"><span class="nav-number">2.2.</span> <span class="nav-text">指定端口 (Specify Port)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E9%87%91%E9%91%B0%E7%99%BB%E5%85%A5-Key-Based-Auth"><span class="nav-number">2.3.</span> <span class="nav-text">使用金鑰登入 (Key-Based Auth)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%B7%E8%A1%8C%E5%96%AE%E6%AC%A1%E6%8C%87%E4%BB%A4-One-Shot-Command"><span class="nav-number">2.4.</span> <span class="nav-text">執行單次指令 (One-Shot Command)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%91%E9%91%B0%E7%AE%A1%E7%90%86-Key-Management"><span class="nav-number">2.5.</span> <span class="nav-text">金鑰管理 (Key Management)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%A7%E9%81%93%E8%88%87%E8%B7%B3%E6%9D%BF-Tunneling-Proxy"><span class="nav-number">3.</span> <span class="nav-text">隧道與跳板 (Tunneling &amp; Proxy)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH-%E9%9A%A7%E9%81%93-Tunneling-Port-Forwarding"><span class="nav-number">3.1.</span> <span class="nav-text">SSH 隧道 (Tunneling &#x2F; Port Forwarding)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8B%95%E6%85%8B%E9%9A%A7%E9%81%93-Dynamic-Forwarding-SOCKS-Proxy"><span class="nav-number">3.2.</span> <span class="nav-text">動態隧道 (Dynamic Forwarding &#x2F; SOCKS Proxy)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH-%E8%B7%B3%E6%9D%BF-Jump-Host"><span class="nav-number">3.3.</span> <span class="nav-text">SSH 跳板 (Jump Host)</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -218,9 +218,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2026-01-18 21:01:40 / 修改時間：21:57:08" itemprop="dateCreated datePublished" datetime="2026-01-18T21:01:40+08:00">2026-01-18</time>
+      <time title="創建時間：2026-01-18 21:01:40" itemprop="dateCreated datePublished" datetime="2026-01-18T21:01:40+08:00">2026-01-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2026-02-05 15:05:10" itemprop="dateModified" datetime="2026-02-05T15:05:10+08:00">2026-02-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,8 +247,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>&lt;–</p>
-<h1 id="SSH-簡介"><a href="#SSH-簡介" class="headerlink" title="SSH 簡介"></a>SSH 簡介</h1><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。<br>預設 Port： TCP 22。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="SSH-簡介"><a href="#SSH-簡介" class="headerlink" title="SSH 簡介"></a>SSH 簡介</h1><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： 取代了早期的 Telnet。Telnet 是明文傳輸（任何人用 Wireshark 都能看到你的密碼），而 SSH 是全加密的。<br>預設 Port： TCP 22。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
 <h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1><h2 id="基礎連線-Basic-Connection"><a href="#基礎連線-Basic-Connection" class="headerlink" title="基礎連線 (Basic Connection)"></a>基礎連線 (Basic Connection)</h2><p>最基本的登入方式。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#語法: ssh [使用者]@[主機IP或網域]</span><br><span class="line">ssh root@192.168.1.100</span><br><span class="line"></span><br><span class="line">#如果你的本地帳號和遠端帳號一樣，可以省略使用者名稱</span><br><span class="line">ssh 192.168.1.100</span><br></pre></td></tr></table></figure>
 
@@ -262,8 +267,15 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#這指令會自動把你的 id_ed25519.pub 內容複製到遠端伺服器的 ~/.ssh/authorized_keys</span><br><span class="line">ssh-copy-id user@host</span><br></pre></td></tr></table></figure>
 
 <h1 id="隧道與跳板-Tunneling-Proxy"><a href="#隧道與跳板-Tunneling-Proxy" class="headerlink" title="隧道與跳板 (Tunneling &amp; Proxy)"></a>隧道與跳板 (Tunneling &amp; Proxy)</h1><p>這是 SSH 最強大的功能。它可以把你的流量「藏」在 SSH 連線裡面，繞過防火牆。</p>
-<p><strong>本地 Port Forwarding (Local Forwarding)</strong>
-    </p>
+<h2 id="SSH-隧道-Tunneling-Port-Forwarding"><a href="#SSH-隧道-Tunneling-Port-Forwarding" class="headerlink" title="SSH 隧道 (Tunneling &#x2F; Port Forwarding)"></a>SSH 隧道 (Tunneling &#x2F; Port Forwarding)</h2><p>情境： 假設你攻陷了一台網頁伺服器 (Server A)。 這台 Server A 內部還有一個 資料庫 (Database)，跑在 Port 3306。 但是！管理員設了防火牆，只允許 Port 22 (SSH) 通行，其他路都被封死了。你無法直接連線到 3306 偷資料。<br>解決方案： 既然 Port 22 是唯一暢通的路，那我們就把「資料庫的連線」塞進 SSH 這個地道裡偷渡出來。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L 9999:localhost:3306 user@serverA</span><br></pre></td></tr></table></figure>
+<p>-L (Local): 在我本地電腦開一個入口。<br>9999: 在本地開9999 port<br>localhost:3306: 出口要接到伺服器那邊的 3306。<br>結果： 現在，你只要連線到你自己電腦的 localhost:9999，SSH 就會幫你把訊號透過地道傳送到伺服器的 3306。 防火牆只看到你在用 SSH，完全不知道裡面包裹著資料庫的傳輸。</p>
+<h2 id="動態隧道-Dynamic-Forwarding-SOCKS-Proxy"><a href="#動態隧道-Dynamic-Forwarding-SOCKS-Proxy" class="headerlink" title="動態隧道 (Dynamic Forwarding &#x2F; SOCKS Proxy)"></a>動態隧道 (Dynamic Forwarding &#x2F; SOCKS Proxy)</h2><p>情境： 你在星巴克用 Wi-Fi，但你不想讓星巴克知道你在看什麼網站。或者你想去瀏覽一個只有美國 IP 才能看的網站。<br>解決方案： 你把遠端的 SSH 伺服器當成你的「代理人」。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -D 1080 user@server</span><br><span class="line">#-D (Dynamic): 在我本地開一個 Port 1080 (通常當作 SOCKS 代理)。</span><br></pre></td></tr></table></figure>
+<p>結果： 我所有要上網的流量，都先丟進這個 1080 地道。這些流量會從遠端伺服器那邊冒出來，再連去 Google 或 Netflix。</p>
+<h2 id="SSH-跳板-Jump-Host"><a href="#SSH-跳板-Jump-Host" class="headerlink" title="SSH 跳板 (Jump Host)"></a>SSH 跳板 (Jump Host)</h2><p>情境： 大多數企業為了安全，重要的主機（比如存客戶個資的資料庫 Server B）是完全沒有對外網路的。你無法直接 SSH 連進去。 但是，有一台比較不重要的機器（Server A，我們稱為 Bastion Host 或跳板機）是可以從外部連線的，而且 Server A 可以連到 Server B。<br>路徑： 你 -&gt; Server A (跳板) -&gt; Server B (目標)。<br>解決方案： 以前我們很笨，要先 SSH 進 A，然後在 A 裡面再打一次 SSH 連去 B。 現在 SSH 有一個超強參數 -J (Jump)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -J user@ServerA user@ServerB</span><br></pre></td></tr></table></figure>
+<p>結果： 直接登入了 Server B，中間的跳轉過程 SSH 自動幫你處理好了。</p>
 
     </div>
 
