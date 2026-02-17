@@ -141,7 +141,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -176,6 +176,107 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/01/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/Bandit-Level-0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="coco39831">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coco39831的筆記倉庫">
+      <meta itemprop="description" content="你好">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | coco39831的筆記倉庫">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/01/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/Bandit-Level-0/" class="post-title-link" itemprop="url">Bandit-Level-0</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2026-01-17 20:32:14" itemprop="dateCreated datePublished" datetime="2026-01-17T20:32:14+08:00">2026-01-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2026-02-07 16:56:37" itemprop="dateModified" datetime="2026-02-07T16:56:37+08:00">2026-02-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/Bandit/" itemprop="url" rel="index"><span itemprop="name">Bandit</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="目標-Objective"><a href="#目標-Objective" class="headerlink" title="目標 Objective"></a>目標 Objective</h2><p>透過ssh連上伺服器</p>
+<p>網址:bandit.labs.overthewire.org<br>port:2220<br>username:bandit0<br>password:bandit0 (在linux系統下輸入密碼不會顯示是正常的，這叫做終端回顯抑制 Terminal Echo Suppression，是為了防止肩後窺視Shoulder Surfing)</p>
+<h2 id="ssh是甚麼"><a href="#ssh是甚麼" class="headerlink" title="ssh是甚麼"></a>ssh是甚麼</h2><p>定義： SSH (Secure Shell) 是一種加密的網路傳輸協定。<br>用途： 用於在不安全的網路（網際網路）上，安全地操作遠端電腦。<br>前身： Telnet 之所以危險，是因為它在 TCP 三向交握後，所有資料（包括密碼）都是以 Plaintext（明文） 傳輸，而 SSH 使用了非對稱加密，確保攻擊者攔截封包也只能看見亂碼。<br>運作模式： Client-Server 架構。你的電腦是 Client (ssh 指令)，伺服器端運行 Daemon (sshd)。</p>
+<h3 id="基礎連線-Basic-Connection"><a href="#基礎連線-Basic-Connection" class="headerlink" title="基礎連線 (Basic Connection)"></a>基礎連線 (Basic Connection)</h3><p>最基本的登入方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#語法: ssh [使用者]@[主機IP或網域]</span><br><span class="line">ssh bandit0@bandit.labs.overthewire.org</span><br><span class="line"></span><br><span class="line">#如果你的本地帳號和遠端帳號一樣，可以省略使用者名稱</span><br><span class="line">ssh bandit.labs.overthewire.org</span><br></pre></td></tr></table></figure>
+<h3 id="指定端口-Specify-Port"><a href="#指定端口-Specify-Port" class="headerlink" title="指定端口 (Specify Port)"></a>指定端口 (Specify Port)</h3><p>為了避免自動化掃描，有時候服務不一定開在預設端口<br>預設端口:TCP 22 port</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2026/01/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/Bandit-Level-0/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
