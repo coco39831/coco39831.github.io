@@ -20,27 +20,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","hits":"找到 ${hits} 個搜索結果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="目標在 data.txt 中找到那個被好幾個 &#x3D; 符號包圍的密碼。 解法1strings data.txt | grep &quot;&#x3D;&#x3D;&quot;  string它會自動忽略那些看不懂的二進制代碼，只把連續的可讀字元顯示出來。">
+    <meta name="description" content="目標用目錄底下的私鑰進入下一關 解法將家目錄底下的私鑰複製到自己電腦後 1ssh -i [自己的檔案名稱.key] bandit14@bandit.labs.overthewire.org -p 2220">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bandit-level-9-&gt;10">
-<meta property="og:url" content="http://example.com/2026/02/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-910/index.html">
+<meta property="og:title" content="bandit-level-13-&gt;14">
+<meta property="og:url" content="http://example.com/2026/02/22/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-1314/index.html">
 <meta property="og:site_name" content="coco39831的筆記倉庫">
-<meta property="og:description" content="目標在 data.txt 中找到那個被好幾個 &#x3D; 符號包圍的密碼。 解法1strings data.txt | grep &quot;&#x3D;&#x3D;&quot;  string它會自動忽略那些看不懂的二進制代碼，只把連續的可讀字元顯示出來。">
+<meta property="og:description" content="目標用目錄底下的私鑰進入下一關 解法將家目錄底下的私鑰複製到自己電腦後 1ssh -i [自己的檔案名稱.key] bandit14@bandit.labs.overthewire.org -p 2220">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2026-02-17T08:18:37.000Z">
-<meta property="article:modified_time" content="2026-02-17T10:33:46.450Z">
+<meta property="article:published_time" content="2026-02-22T06:40:10.000Z">
+<meta property="article:modified_time" content="2026-02-22T07:47:31.439Z">
 <meta property="article:author" content="coco39831">
 <meta property="article:tag" content="Bandit">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2026/02/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-910/">
+<link rel="canonical" href="http://example.com/2026/02/22/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-1314/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/2026/02/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-910/","path":"2026/02/17/Linux入門之bandit/bandit-level-910/","title":"bandit-level-9->10"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"http://example.com/2026/02/22/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-1314/","path":"2026/02/22/Linux入門之bandit/bandit-level-1314/","title":"bandit-level-13->14"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>bandit-level-9->10 | coco39831的筆記倉庫</title>
+<title>bandit-level-13->14 | coco39831的筆記倉庫</title>
   
 
 
@@ -130,7 +130,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E6%A8%99"><span class="nav-number">1.</span> <span class="nav-text">目標</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#string"><span class="nav-number">3.</span> <span class="nav-text">string</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E6%A8%99"><span class="nav-number">1.</span> <span class="nav-text">目標</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">解法</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -190,7 +190,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/02/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-910/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/02/22/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-1314/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -203,12 +203,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="bandit-level-9-&gt;10 | coco39831的筆記倉庫">
+      <meta itemprop="name" content="bandit-level-13-&gt;14 | coco39831的筆記倉庫">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          bandit-level-9->10
+          bandit-level-13->14
         </h1>
 
         <div class="post-meta-container">
@@ -220,7 +220,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2026-02-17 16:18:37 / 修改時間：18:33:46" itemprop="dateCreated datePublished" datetime="2026-02-17T16:18:37+08:00">2026-02-17</time>
+      <time title="創建時間：2026-02-22 14:40:10 / 修改時間：15:47:31" itemprop="dateCreated datePublished" datetime="2026-02-22T14:40:10+08:00">2026-02-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -245,11 +245,9 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h1><p>在 data.txt 中找到那個被好幾個 &#x3D; 符號包圍的密碼。</p>
-<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings data.txt | grep &quot;==&quot;</span><br></pre></td></tr></table></figure>
-
-<h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><p>它會自動忽略那些看不懂的二進制代碼，只把連續的可讀字元顯示出來。</p>
-
+    <div class="post-body" itemprop="articleBody"><h1 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h1><p>用目錄底下的私鑰進入下一關</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><p>將家目錄底下的私鑰複製到自己電腦後</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i [自己的檔案名稱.key] bandit14@bandit.labs.overthewire.org -p 2220</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -265,14 +263,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2026/02/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-89/" rel="prev" title="bandit-level-8-&gt;9">
-                  <i class="fa fa-angle-left"></i> bandit-level-8->9
+                <a href="/2026/02/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-1213/" rel="prev" title="bandit-level-12-&gt;13">
+                  <i class="fa fa-angle-left"></i> bandit-level-12->13
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2026/02/17/Linux%E5%85%A5%E9%96%80%E4%B9%8Bbandit/bandit-level-1011/" rel="next" title="bandit-level-10-&gt;11">
-                  bandit-level-10->11 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
