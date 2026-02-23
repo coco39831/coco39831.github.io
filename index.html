@@ -313,7 +313,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2026-02-22 14:39:30" itemprop="dateModified" datetime="2026-02-22T14:39:30+08:00">2026-02-22</time>
+      <time title="修改時間：2026-02-23 22:31:05" itemprop="dateModified" datetime="2026-02-23T22:31:05+08:00">2026-02-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -341,7 +341,7 @@
     <div class="post-body" itemprop="articleBody">
           <h1 id="目標"><a href="#目標" class="headerlink" title="目標"></a>目標</h1><p>這次的 data.txt 是檔案的 Hex Dump（十六進制轉儲）。你必須先把它還原成原始二進制檔案，然後你會發現它被套了一層又一層的壓縮包</p>
 <h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /tmp/coco_pack; cp data.txt /tmp/coco_pack; cd /tmp/coco_pack #將檔案至tmp區進行操作</span><br><span class="line">cat data.txt #會發現他的內容是二進制</span><br><span class="line">xxd -r data.txt &gt; data_binary #將二進制檔還原成壓縮檔</span><br></pre></td></tr></table></figure>
-<p>接下來就持續用 file 檢視檔案類型，將檔案命名為對應的附檔名（.gz, .bz2, .tar）並進行解壓縮，持續直到出現ASCII的文件</p>
+<p>接下來就持續用 file 檢視檔案類型，將檔案命名為對應的附檔名（.gz, .bz, .tar）並進行解壓縮，持續直到出現ASCII的文件</p>
 
           <!--noindex-->
             <div class="post-button">
